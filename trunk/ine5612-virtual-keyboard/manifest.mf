@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Name: /component/VirtualMultilayoutKeyboard.class
+Name: /ine5612/components/virtualkeyboard/VirtualMultilayoutKeyboard.class
 Java-Bean: True

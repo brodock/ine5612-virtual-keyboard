@@ -1,5 +1,6 @@
 package ine5612.components.virtualkeyboard;
 
+import ine5612.components.virtualkeyboard.gui.BankKeyboard;
 import java.awt.Dimension;
 /*
  * VirtualMultilayoutKeyboard.java
@@ -788,7 +789,9 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
         
         switch (this.VKType) {
             case 1:
-                this.initBankComponents();
+                //this.initBankComponents();
+                this.removeAll();
+                this.add(new BankKeyboard());
                 break;
             case 2:
                 this.initCalcComponents();
