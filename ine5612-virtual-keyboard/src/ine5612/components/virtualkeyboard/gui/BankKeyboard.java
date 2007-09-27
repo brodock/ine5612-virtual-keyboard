@@ -23,7 +23,7 @@ import javax.swing.JPanel;
  * Bank Keyboard
  * @author Gabriel, Ramon
  */
-public class BankKeyboard extends javax.swing.JFrame {
+public class BankKeyboard extends javax.swing.JPanel {
     
     /** Creates new form BankKeyboard */
     public BankKeyboard() {
@@ -102,53 +102,39 @@ public class BankKeyboard extends javax.swing.JFrame {
     
     public void randomize_keyboard() {
         
-        ArrayList<Integer> posicaox1 = new ArrayList<Integer>();
-        ArrayList<Integer> posicaox2 = new ArrayList<Integer>();
-        ArrayList<JButton> botoes = new ArrayList<JButton>();
+        ArrayList<JButton> buttons = new ArrayList<JButton>();
         
-        //Adicionando os botões
-        botoes.add(b0);
-        botoes.add(b1);
-        botoes.add(b2);
-        botoes.add(b3);
-        botoes.add(b4);
-        botoes.add(b5);
-        botoes.add(b6);
-        botoes.add(b7);
-        botoes.add(b8);
-        botoes.add(b9);
+        // adding the buttons to arraylist to be recovered after
+        buttons.add(b0);
+        buttons.add(b1);
+        buttons.add(b2);
+        buttons.add(b3);
+        buttons.add(b4);
+        buttons.add(b5);
+        buttons.add(b6);
+        buttons.add(b7);
+        buttons.add(b8);
+        buttons.add(b9);
         
         
-        // Listas com valores a serem utilizados nos gridbags
-        for (int x=0; x<5; x++) {
-            posicaox1.add(x);
-            posicaox2.add(x);
-        }
-        
-        // comeca a distribuição aleatória
+        // here starts the shuffle algorithm
         
         int random;
-        int limite = 9;
-        JButton botao;
+        int limite = 10;
+        JButton button;
         
         JPanel p = (JPanel)b0.getParent();
         this.removeAll();
         
-        for (int x=0; x<9; x++) {
-            random = (int)Math.random()*limite;
+        for (int x=0; x<=9; x++) {
+            random = (int)(Math.random()*limite);
             limite--;
-            botao = botoes.get(random);
-            this.add(botao);
+            button = buttons.get(random);
+            button.remove(random);
+            this.add(button);
             
         }
         
     }
-  
-    /**
-    public static void main(String[] Args) {
-        BankKeyboard b = new BankKeyboard();
-        b.show();
-        b.randomize_keyboard();
-    }
-    */
+    
 }
