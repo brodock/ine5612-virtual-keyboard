@@ -1,4 +1,4 @@
-package component;
+package ine5612.components.virtualkeyboard;
 
 import java.awt.Dimension;
 /*
