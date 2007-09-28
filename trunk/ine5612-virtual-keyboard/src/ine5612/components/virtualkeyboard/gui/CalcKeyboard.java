@@ -46,9 +46,8 @@ public class CalcKeyboard extends javax.swing.JPanel {
         bInverse = new javax.swing.JButton();
         bPoint = new javax.swing.JButton();
 
-        getContentPane().setLayout(new java.awt.GridLayout(4, 3, 2, 2));
+        setLayout(new java.awt.GridLayout(4, 3, 3, 3));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         b7.setText("7");
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +55,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b7);
+        add(b7);
 
         b8.setText("8");
         b8.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +64,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b8);
+        add(b8);
 
         b9.setText("9");
         b9.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +73,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b9);
+        add(b9);
 
         b4.setText("4");
         b4.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +82,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b4);
+        add(b4);
 
         b5.setText("5");
         b5.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +91,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b5);
+        add(b5);
 
         b6.setText("6");
         b6.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +100,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b6);
+        add(b6);
 
         b1.setText("1");
         b1.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +109,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b1);
+        add(b1);
 
         b2.setText("2");
         b2.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +118,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b2);
+        add(b2);
 
         b3.setText("3");
         b3.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +127,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b3);
+        add(b3);
 
         b0.setText("0");
         b0.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +136,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(b0);
+        add(b0);
 
         bInverse.setText("+/-");
         bInverse.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +145,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(bInverse);
+        add(bInverse);
 
         bPoint.setText(".");
         bPoint.addActionListener(new java.awt.event.ActionListener() {
@@ -155,9 +154,8 @@ public class CalcKeyboard extends javax.swing.JPanel {
             }
         });
 
-        getContentPane().add(bPoint);
+        add(bPoint);
 
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
