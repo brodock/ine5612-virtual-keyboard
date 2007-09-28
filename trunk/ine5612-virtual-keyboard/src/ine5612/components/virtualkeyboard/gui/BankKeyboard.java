@@ -38,8 +38,6 @@ public class BankKeyboard extends javax.swing.JPanel {
      */
     // <editor-fold defaultstate="collapsed" desc=" Generated Code ">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
-
         b0 = new javax.swing.JButton();
         b1 = new javax.swing.JButton();
         b2 = new javax.swing.JButton();
@@ -54,36 +52,100 @@ public class BankKeyboard extends javax.swing.JPanel {
         setLayout(new java.awt.GridLayout(2, 5));
 
         b0.setText("0");
+        b0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b0);
 
         b1.setText("1");
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b1);
 
         b2.setText("2");
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b2);
 
         b3.setText("3");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b3);
 
         b4.setText("4");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b4);
 
         b5.setText("5");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b5);
 
         b6.setText("6");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b6);
 
         b7.setText("7");
+        b7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b7);
 
         b8.setText("8");
+        b8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b8);
 
         b9.setText("9");
+        b9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BankKeyboard.this.actionPerformed(evt);
+            }
+        });
+
         add(b9);
 
     }// </editor-fold>//GEN-END:initComponents
+
+    private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
+        // Fire Event
+    }//GEN-LAST:event_actionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -118,17 +180,16 @@ public class BankKeyboard extends javax.swing.JPanel {
         
         
         // here starts the shuffle algorithm
-        
         int random;
-        int limite = 10;
+        int limit = 10;
         JButton button;
         
         JPanel p = (JPanel)b0.getParent();
         this.removeAll();
         
         for (int x=0; x<=9; x++) {
-            random = (int)(Math.random()*limite);
-            limite--;
+            random = (int)(Math.random()*limit);
+            limit--;
             button = buttons.get(random);
             button.remove(random);
             this.add(button);
@@ -136,5 +197,6 @@ public class BankKeyboard extends javax.swing.JPanel {
         }
         
     }
+
     
 }
