@@ -19,7 +19,7 @@ package ine5612.components.virtualkeyboard.gui;
  *
  * @author Gabriel, Ramon
  */
-public class CalcKeyboard extends javax.swing.JFrame {
+public class CalcKeyboard extends javax.swing.JPanel {
     
     /** Creates new form CalcKeyboard */
     public CalcKeyboard() {
