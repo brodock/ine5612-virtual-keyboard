@@ -181,17 +181,16 @@ public class BankKeyboard extends javax.swing.JPanel {
         
         // here starts the shuffle algorithm
         int random;
-        int limit = 10;
         JButton button;
         
         JPanel p = (JPanel)b0.getParent();
         this.removeAll();
         
         for (int x=0; x<=9; x++) {
-            random = (int)(Math.random()*limit);
-            limit--;
+            random = (int)(Math.random()*(buttons.size()));
             button = buttons.get(random);
-            button.remove(random);
+            //System.out.println("Random: "+Integer.toString(random)+" Size: "+Integer.toString(buttons.size()));
+            buttons.remove(random);
             this.add(button);
             
         }
