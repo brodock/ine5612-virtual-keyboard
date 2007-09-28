@@ -51,9 +51,8 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
      */
     // <editor-fold defaultstate="collapsed" desc=" Generated Code ">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        setLayout(new java.awt.GridBagLayout());
+        setLayout(new java.awt.GridLayout());
 
     }// </editor-fold>//GEN-END:initComponents
     
