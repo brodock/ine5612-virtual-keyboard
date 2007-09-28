@@ -49,7 +49,7 @@ public class BankKeyboard extends javax.swing.JPanel {
         b8 = new javax.swing.JButton();
         b9 = new javax.swing.JButton();
 
-        setLayout(new java.awt.GridLayout(2, 5));
+        setLayout(new java.awt.GridLayout(2, 5, 3, 3));
 
         b0.setText("0");
         b0.addActionListener(new java.awt.event.ActionListener() {
