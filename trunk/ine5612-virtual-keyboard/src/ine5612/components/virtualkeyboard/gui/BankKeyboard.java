@@ -18,6 +18,7 @@ package ine5612.components.virtualkeyboard.gui;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard;
 
 /**
  * Bank Keyboard
@@ -25,10 +26,28 @@ import javax.swing.JPanel;
  */
 public class BankKeyboard extends javax.swing.JPanel {
     
+    private VirtualMultilayoutKeyboard vmlk;
+    
     /** Creates new form BankKeyboard */
-    public BankKeyboard() {
+    public BankKeyboard(VirtualMultilayoutKeyboard vmlk) {
+        this.vmlk = vmlk;
         initComponents();
         randomize_keyboard();
+        setActionCommandAll();
+    }
+    
+    public void setActionCommandAll() {
+        b0.setActionCommand("0");
+        b1.setActionCommand("1");
+        b2.setActionCommand("2");
+        b3.setActionCommand("3");
+        b4.setActionCommand("4");
+        b5.setActionCommand("5");
+        b6.setActionCommand("6");
+        b7.setActionCommand("7");
+        b8.setActionCommand("8");
+        b9.setActionCommand("9");
+        
     }
     
     /** This method is called from within the constructor to
@@ -145,6 +164,7 @@ public class BankKeyboard extends javax.swing.JPanel {
 
     private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
         // Fire Event
+        vmlk.recvEvent(evt);
     }//GEN-LAST:event_actionPerformed
     
     

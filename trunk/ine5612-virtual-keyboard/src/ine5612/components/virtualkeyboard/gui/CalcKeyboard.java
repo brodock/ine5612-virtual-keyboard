@@ -15,15 +15,36 @@
 
 package ine5612.components.virtualkeyboard.gui;
 
+import ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard;
+
 /**
  *
  * @author Gabriel, Ramon
  */
 public class CalcKeyboard extends javax.swing.JPanel {
     
+    VirtualMultilayoutKeyboard vmlk;
+    
     /** Creates new form CalcKeyboard */
-    public CalcKeyboard() {
+    public CalcKeyboard(VirtualMultilayoutKeyboard vmlk) {
+        this.vmlk = vmlk;
         initComponents();
+    }
+    
+    public void setActionCommandAll() {
+        b0.setActionCommand("0");
+        b1.setActionCommand("1");
+        b2.setActionCommand("2");
+        b3.setActionCommand("3");
+        b4.setActionCommand("4");
+        b5.setActionCommand("5");
+        b6.setActionCommand("6");
+        b7.setActionCommand("7");
+        b8.setActionCommand("8");
+        b9.setActionCommand("9");
+        bInverse.setActionCommand("+/-");
+        bPoint.setActionCommand(".");
+        
     }
     
     /** This method is called from within the constructor to
@@ -160,6 +181,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
 
     private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
         // TODO: FireEvent
+        vmlk.recvEvent(evt);
     }//GEN-LAST:event_actionPerformed
     
     
