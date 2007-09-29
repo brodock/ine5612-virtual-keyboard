@@ -38,11 +38,11 @@
                   </Group>
                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                      <Component id="VK" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="virtualMultilayoutKeyboard1" min="-2" pref="258" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="109" max="32767" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,9 +56,9 @@
                   <Component id="radioCalc" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="radioVOIP" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-              <Component id="VK" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="105" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="virtualMultilayoutKeyboard1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="labOutput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="textoSaida" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -140,9 +140,12 @@
         <Property name="text" type="java.lang.String" value="Tipo do Teclado"/>
       </Properties>
     </Component>
-    <Component class="component.VirtualMultilayoutKeyboard" name="VK">
+    <Component class="ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard" name="virtualMultilayoutKeyboard1">
+      <Properties>
+        <Property name="VKType" type="int" value="3"/>
+      </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VKActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="virtualMultilayoutKeyboard1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

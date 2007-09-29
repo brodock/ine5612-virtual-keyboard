@@ -31,7 +31,7 @@ public class Limite extends javax.swing.JFrame {
         labOutput = new javax.swing.JLabel();
         textoSaida = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        VK = new component.VirtualMultilayoutKeyboard();
+        virtualMultilayoutKeyboard1 = new ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         grupoTipoVK.add(radioBanco);
@@ -70,9 +70,10 @@ public class Limite extends javax.swing.JFrame {
 
         jLabel1.setText("Tipo do Teclado");
 
-        VK.addActionListener(new java.awt.event.ActionListener() {
+        virtualMultilayoutKeyboard1.setVKType(3);
+        virtualMultilayoutKeyboard1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VKActionPerformed(evt);
+                virtualMultilayoutKeyboard1ActionPerformed(evt);
             }
         });
 
@@ -94,9 +95,9 @@ public class Limite extends javax.swing.JFrame {
                         .addComponent(radioVOIP))
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(VK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(109, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(virtualMultilayoutKeyboard1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,15 +108,20 @@ public class Limite extends javax.swing.JFrame {
                     .addComponent(radioBanco)
                     .addComponent(radioCalc)
                     .addComponent(radioVOIP))
-                .addGap(90, 90, 90)
-                .addComponent(VK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
+                .addComponent(virtualMultilayoutKeyboard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labOutput)
                     .addComponent(textoSaida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void virtualMultilayoutKeyboard1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_virtualMultilayoutKeyboard1ActionPerformed
+// TODO add your handling code here:
+        textoSaida.setText(evt.getActionCommand());
+    }//GEN-LAST:event_virtualMultilayoutKeyboard1ActionPerformed
 
     private void VKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VKActionPerformed
 // TODO add your handling code here:
@@ -124,21 +130,21 @@ public class Limite extends javax.swing.JFrame {
 
     private void radioBancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioBancoActionPerformed
 // TODO add your handling code here:
-        VK.setVKType(1);
+        virtualMultilayoutKeyboard1.setVKType(1);
         this.pack();
         this.repaint();
     }//GEN-LAST:event_radioBancoActionPerformed
 
     private void radioCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioCalcActionPerformed
 // TODO add your handling code here:
-        VK.setVKType(2);
+        virtualMultilayoutKeyboard1.setVKType(2);
         this.pack();
         this.repaint();
     }//GEN-LAST:event_radioCalcActionPerformed
 
     private void radioVOIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioVOIPActionPerformed
 // TODO add your handling code here:
-        VK.setVKType(3);
+        virtualMultilayoutKeyboard1.setVKType(3);
         this.pack();
         this.repaint();
     }//GEN-LAST:event_radioVOIPActionPerformed
@@ -155,7 +161,6 @@ public class Limite extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private component.VirtualMultilayoutKeyboard VK;
     private javax.swing.ButtonGroup grupoTipoVK;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labOutput;
@@ -163,6 +168,7 @@ public class Limite extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioCalc;
     private javax.swing.JRadioButton radioVOIP;
     private javax.swing.JTextField textoSaida;
+    private ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard virtualMultilayoutKeyboard1;
     // End of variables declaration//GEN-END:variables
     
 }
