@@ -84,15 +84,15 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
             case 1:
                 //this.initBankComponents();
                 this.removeAll();
-                this.add(new BankKeyboard());
+                this.add(new BankKeyboard(this));
                 break;
             case 2:
                 this.removeAll();
-                this.add(new CalcKeyboard());
+                this.add(new CalcKeyboard(this));
                 break;
             case 3:
                 this.removeAll();
-                this.add(new VoipKeyboard());
+                this.add(new VoipKeyboard(this));
                 break;
             default:
                 break;
@@ -136,6 +136,10 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
                 ((java.awt.event.ActionListener)listeners[i+1]).actionPerformed (event);
             }
         }
+    }
+    
+    public void recvEvent(java.awt.event.ActionEvent evt) {
+        fireEvent(evt);
     }
     
 }
