@@ -23,30 +23,12 @@ import ine5612.components.virtualkeyboard.VirtualMultilayoutKeyboard;
  */
 public class CalcKeyboard extends javax.swing.JPanel {
     
-    VirtualMultilayoutKeyboard vmlk;
-    
     /** Creates new form CalcKeyboard */
-    public CalcKeyboard(VirtualMultilayoutKeyboard vmlk) {
-        this.vmlk = vmlk;
+    public CalcKeyboard() {
         initComponents();
     }
     
-    public void setActionCommandAll() {
-        b0.setActionCommand("0");
-        b1.setActionCommand("1");
-        b2.setActionCommand("2");
-        b3.setActionCommand("3");
-        b4.setActionCommand("4");
-        b5.setActionCommand("5");
-        b6.setActionCommand("6");
-        b7.setActionCommand("7");
-        b8.setActionCommand("8");
-        b9.setActionCommand("9");
-        bInverse.setActionCommand("+/-");
-        bPoint.setActionCommand(".");
-        
-    }
-    
+       
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -180,8 +162,7 @@ public class CalcKeyboard extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionPerformed
-        // TODO: FireEvent
-        vmlk.recvEvent(evt);
+        this.fireEvent(evt);
     }//GEN-LAST:event_actionPerformed
     
     
@@ -199,5 +180,44 @@ public class CalcKeyboard extends javax.swing.JPanel {
     private javax.swing.JButton bInverse;
     private javax.swing.JButton bPoint;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Utility field used by event firing mechanism.
+     */
+    private javax.swing.event.EventListenerList listenerList =  null;
+
+    /**
+     * Registers ActionListener to receive events.
+     * @param listener The listener to register.
+     */
+    public synchronized void addActionListener(java.awt.event.ActionListener listener) {
+        if (listenerList == null ) {
+            listenerList = new javax.swing.event.EventListenerList();
+        }
+        listenerList.add (java.awt.event.ActionListener.class, listener);
+    }
+
+    /**
+     * Removes ActionListener from the list of listeners.
+     * @param listener The listener to remove.
+     */
+    public synchronized void removeActionListener(java.awt.event.ActionListener listener) {
+        listenerList.remove (java.awt.event.ActionListener.class, listener);
+    }
+
+    /**
+     * Notifies all registered listeners about the event.
+     * 
+     * @param event The event to be fired
+     */
+    private void fireEvent(java.awt.event.ActionEvent event) {
+        if (listenerList == null) return;
+        Object[] listeners = listenerList.getListenerList ();
+        for (int i = listeners.length - 2; i >= 0; i -= 2) {
+            if (listeners[i]==java.awt.event.ActionListener.class) {
+                ((java.awt.event.ActionListener)listeners[i+1]).actionPerformed (event);
+            }
+        }
+    }
     
 }

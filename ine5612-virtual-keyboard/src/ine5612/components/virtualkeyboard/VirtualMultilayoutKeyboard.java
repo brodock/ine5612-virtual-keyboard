@@ -18,7 +18,7 @@ package ine5612.components.virtualkeyboard;
 import ine5612.components.virtualkeyboard.gui.BankKeyboard;
 import ine5612.components.virtualkeyboard.gui.CalcKeyboard;
 import ine5612.components.virtualkeyboard.gui.VoipKeyboard;
-import java.awt.Dimension;
+
 /*
  * VirtualMultilayoutKeyboard.java
  *
@@ -56,15 +56,15 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
 
     }// </editor-fold>//GEN-END:initComponents
     
-   
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-
+    
     /**
      * Holds value of property VKType.
      */
     private int VKType; // 1=BANK / 2=CALC / 3=VOIP
-
+    
     /**
      * Getter for property VKType.
      * @return Value of property VKType.
@@ -72,7 +72,7 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
     public int getVKType() {
         return this.VKType;
     }
-
+    
     /**
      * Setter for property VKType.
      * @param VKType New value of property VKType.
@@ -82,28 +82,46 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
         
         switch (this.VKType) {
             case 1:
-                //this.initBankComponents();
                 this.removeAll();
-                this.add(new BankKeyboard(this));
+                BankKeyboard bank = new BankKeyboard();
+                bank.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        fireEvent(evt);
+                    }
+                });
+                this.add(bank);
+                
                 break;
             case 2:
                 this.removeAll();
-                this.add(new CalcKeyboard(this));
+                CalcKeyboard calc = new CalcKeyboard();
+                calc.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        fireEvent(evt);
+                    }
+                });
+                this.add(calc);
                 break;
             case 3:
                 this.removeAll();
-                this.add(new VoipKeyboard(this));
+                VoipKeyboard voip = new VoipKeyboard();
+                voip.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        fireEvent(evt);
+                    }
+                });
+                this.add(voip);
                 break;
             default:
                 break;
         }
     }
-
+    
     /**
      * Utility field used by event firing mechanism.
      */
     private javax.swing.event.EventListenerList listenerList =  null;
-
+    
     /**
      * Registers ActionListener to receive events.
      * @param listener The listener to register.
@@ -112,28 +130,28 @@ public class VirtualMultilayoutKeyboard extends javax.swing.JPanel implements ja
         if (listenerList == null ) {
             listenerList = new javax.swing.event.EventListenerList();
         }
-        listenerList.add (java.awt.event.ActionListener.class, listener);
+        listenerList.add(java.awt.event.ActionListener.class, listener);
     }
-
+    
     /**
      * Removes ActionListener from the list of listeners.
      * @param listener The listener to remove.
      */
     public synchronized void removeActionListener(java.awt.event.ActionListener listener) {
-        listenerList.remove (java.awt.event.ActionListener.class, listener);
+        listenerList.remove(java.awt.event.ActionListener.class, listener);
     }
-
+    
     /**
      * Notifies all registered listeners about the event.
-     * 
+     *
      * @param event The event to be fired
      */
     private void fireEvent(java.awt.event.ActionEvent event) {
         if (listenerList == null) return;
-        Object[] listeners = listenerList.getListenerList ();
+        Object[] listeners = listenerList.getListenerList();
         for (int i = listeners.length - 2; i >= 0; i -= 2) {
             if (listeners[i]==java.awt.event.ActionListener.class) {
-                ((java.awt.event.ActionListener)listeners[i+1]).actionPerformed (event);
+                ((java.awt.event.ActionListener)listeners[i+1]).actionPerformed(event);
             }
         }
     }
